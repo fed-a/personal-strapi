@@ -1,25 +1,18 @@
 import path from "path";
+import { getEnv } from "./get-env";
 
-export default (props) => {
-  console.log({ props });
-  const { env } = props;
-  console.log(
-    process.env["DATABASE_CLIENT"],
-    process.env["DATABASE_NAME"],
-    process.env["PATH"],
-    process.env
-  );
-  const client = env("DATABASE_CLIENT", "sqlite");
+export default ({ env }) => {
+  const client = getEnv(env, "DATABASE_CLIENT", "sqlite");
 
   const connections = {
     mysql: {
       connection: {
-        connectionString: env("DATABASE_URL"),
-        host: env("DATABASE_HOST", "localhost"),
+        connectionString: getEnv(env, "DATABASE_URL"),
+        host: getEnv(env, "DATABASE_HOST", "localhost"),
         port: env.int("DATABASE_PORT", 3306),
-        database: env("DATABASE_NAME", "strapi"),
-        user: env("DATABASE_USERNAME", "strapi"),
-        password: env("DATABASE_PASSWORD", "strapi"),
+        database: getEnv(env, "DATABASE_NAME", "strapi"),
+        user: getEnv(env, "DATABASE_USERNAME", "strapi"),
+        password: getEnv(env, "DATABASE_PASSWORD", "strapi"),
         ssl: env.bool("DATABASE_SSL", false) && {
           key: env("DATABASE_SSL_KEY", undefined),
           cert: env("DATABASE_SSL_CERT", undefined),
@@ -39,12 +32,12 @@ export default (props) => {
     },
     postgres: {
       connection: {
-        connectionString: env("DATABASE_URL"),
-        host: env("DATABASE_HOST", "localhost"),
+        connectionString: getEnv(env, "DATABASE_URL"),
+        host: getEnv(env, "DATABASE_HOST", "localhost"),
         port: env.int("DATABASE_PORT", 5432),
-        database: env("DATABASE_NAME", "strapi"),
-        user: env("DATABASE_USERNAME", "strapi"),
-        password: env("DATABASE_PASSWORD", "strapi"),
+        database: getEnv(env, "DATABASE_NAME", "strapi"),
+        user: getEnv(env, "DATABASE_USERNAME", "strapi"),
+        password: getEnv(env, "DATABASE_PASSWORD", "strapi"),
         ssl: env.bool("DATABASE_SSL", false) && {
           key: env("DATABASE_SSL_KEY", undefined),
           cert: env("DATABASE_SSL_CERT", undefined),
@@ -56,7 +49,7 @@ export default (props) => {
             true
           ),
         },
-        schema: env("DATABASE_SCHEMA", "public"),
+        schema: getEnv(env, "DATABASE_SCHEMA", "public"),
       },
       pool: {
         min: env.int("DATABASE_POOL_MIN", 2),
@@ -69,7 +62,7 @@ export default (props) => {
           __dirname,
           "..",
           "..",
-          env("DATABASE_FILENAME", "data.db")
+          getEnv(env, "DATABASE_FILENAME", "data.db")
         ),
       },
       useNullAsDefault: true,

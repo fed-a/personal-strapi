@@ -1,13 +1,15 @@
+import { getEnv } from "./get-env";
+
 export default ({ env }) => ({
   auth: {
-    secret: env('ADMIN_JWT_SECRET'),
+    secret: getEnv(env, "ADMIN_JWT_SECRET"),
   },
   apiToken: {
-    salt: env('API_TOKEN_SALT'),
+    salt: getEnv(env, "API_TOKEN_SALT"),
   },
   transfer: {
     token: {
-      salt: env('TRANSFER_TOKEN_SALT'),
+      salt: getEnv(env, "TRANSFER_TOKEN_SALT"),
     },
   },
 });
