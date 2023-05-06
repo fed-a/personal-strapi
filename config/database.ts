@@ -2,6 +2,8 @@ import path from "path";
 import { getEnv } from "./get-env";
 
 export default ({ env }) => {
+  console.log("---START---");
+  getEnv(env, "NODE_ENV");
   const client = getEnv(env, "DATABASE_CLIENT", "sqlite");
 
   const connections = {

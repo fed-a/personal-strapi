@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_texts_tests",
+  "info": {
+    "displayName": "test"
+  },
+  "options": {},
+  "attributes": {
+    "test": {
+      "type": "richtext"
+    }
+  }
+}

@@ -6,6 +6,8 @@ export const getEnv = (
   const result = env(name, defaultValue) ?? process.env[name];
   if (!result) {
     console.log("not found env", name);
+  } else {
+    console.log(`${name} -> ${result}`);
   }
   return result ?? defaultValue;
 };
