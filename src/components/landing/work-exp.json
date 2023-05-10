@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_landing_work_exps",
+  "info": {
+    "displayName": "workExp",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "workName": {
+      "type": "string",
+      "required": true
+    },
+    "from": {
+      "type": "string",
+      "required": true
+    },
+    "to": {
+      "type": "string",
+      "required": true
+    },
+    "objectives": {
+      "type": "string"
+    },
+    "order": {
+      "type": "integer"
+    }
+  }
+}

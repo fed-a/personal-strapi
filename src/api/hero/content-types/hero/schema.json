@@ -1,14 +1,14 @@
 {
-  "kind": "collectionType",
-  "collectionName": "posts",
+  "kind": "singleType",
+  "collectionName": "heroes",
   "info": {
-    "singularName": "post",
-    "pluralName": "posts",
-    "displayName": "Post",
+    "singularName": "hero",
+    "pluralName": "heroes",
+    "displayName": "hero",
     "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {
     "i18n": {
@@ -16,64 +16,61 @@
     }
   },
   "attributes": {
-    "text": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "richtext"
-    },
-    "title": {
+    "name": {
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
       "type": "string",
-      "required": true,
-      "maxLength": 255
+      "required": true
     },
-    "likes": {
+    "toContacts": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true
+    },
+    "toWorks": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true
+    },
+    "down": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true
+    },
+    "consoleTexts": {
+      "type": "component",
+      "repeatable": true,
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
       },
-      "type": "integer",
-      "required": false
+      "component": "landing.typing-text"
     },
-    "fires": {
+    "socialLinks": {
+      "type": "component",
+      "repeatable": true,
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
       },
-      "type": "integer"
-    },
-    "loves": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "type": "integer"
-    },
-    "crys": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "type": "integer"
-    },
-    "evils": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "type": "integer"
+      "component": "landing.social-link"
     }
   }
 }

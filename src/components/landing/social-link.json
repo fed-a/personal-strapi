@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_landing_social_links",
+  "info": {
+    "displayName": "socialLink"
+  },
+  "options": {},
+  "attributes": {
+    "iconName": {
+      "type": "string",
+      "required": true
+    },
+    "href": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

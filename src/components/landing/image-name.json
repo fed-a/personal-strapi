@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_landing_image_names",
+  "info": {
+    "displayName": "imageName",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "order": {
+      "type": "integer"
+    },
+    "iconName": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

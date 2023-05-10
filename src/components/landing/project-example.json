@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_landing_project_examples",
+  "info": {
+    "displayName": "projectExample"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "hrefPreview": {
+      "type": "string"
+    },
+    "hrefSource": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_landing_typing_texts",
+  "info": {
+    "displayName": "typingText"
+  },
+  "options": {},
+  "attributes": {
+    "openCommand": {
+      "type": "string",
+      "required": true
+    },
+    "asciiImage": {
+      "type": "text"
+    }
+  }
+}
