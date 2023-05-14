@@ -16,14 +16,6 @@
     }
   },
   "attributes": {
-    "text": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "richtext"
-    },
     "title": {
       "pluginOptions": {
         "i18n": {
@@ -34,46 +26,58 @@
       "required": true,
       "maxLength": 255
     },
-    "likes": {
+    "description": {
       "pluginOptions": {
         "i18n": {
-          "localized": false
+          "localized": true
         }
       },
-      "type": "integer",
-      "required": false
+      "type": "string",
+      "required": true
     },
-    "fires": {
+    "metaTitle": {
       "pluginOptions": {
         "i18n": {
-          "localized": false
+          "localized": true
         }
       },
-      "type": "integer"
+      "type": "string",
+      "required": true
     },
-    "loves": {
+    "slug": {
       "pluginOptions": {
         "i18n": {
-          "localized": false
+          "localized": true
         }
       },
-      "type": "integer"
+      "type": "string",
+      "required": true
     },
-    "crys": {
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ],
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
-      },
-      "type": "integer"
+      }
     },
-    "evils": {
+    "content": {
       "pluginOptions": {
         "i18n": {
-          "localized": false
+          "localized": true
         }
       },
-      "type": "integer"
+      "type": "dynamiczone",
+      "components": [
+        "dynamic-content.text",
+        "dynamic-content.image"
+      ],
+      "required": true
     }
   }
 }
