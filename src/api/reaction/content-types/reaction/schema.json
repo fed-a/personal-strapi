@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reactions",
+  "info": {
+    "singularName": "reaction",
+    "pluralName": "reactions",
+    "displayName": "Reaction",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "post": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::post.post",
+      "inversedBy": "reactions"
+    },
+    "reaction": {
+      "type": "enumeration",
+      "enum": [
+        "like",
+        "fire",
+        "hearts",
+        "tears",
+        "angry"
+      ],
+      "required": true
+    }
+  }
+}
