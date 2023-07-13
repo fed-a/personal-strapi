@@ -20,6 +20,7 @@
     "better-sqlite3": "8.4.0",
     "pg": "^8.11.0",
     "sharp": "^0.32.1",
+    "strapi-plugin-content-tags": "^1.0.1",
     "strapi-plugin-responsive-image": "^1.0.1",
     "strapi-plugin-wysiwyg-react-md-editor": "^4.3.0"
   },
