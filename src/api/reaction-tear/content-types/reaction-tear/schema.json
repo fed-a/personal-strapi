@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reaction_tears",
+  "info": {
+    "singularName": "reaction-tear",
+    "pluralName": "reaction-tears",
+    "displayName": "ReactionTear"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "userHash": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

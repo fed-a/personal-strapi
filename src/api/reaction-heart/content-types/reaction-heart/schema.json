@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reaction_hearts",
+  "info": {
+    "singularName": "reaction-heart",
+    "pluralName": "reaction-hearts",
+    "displayName": "ReactionHeart"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "userHash": {
+      "type": "string",
+      "required": false,
+      "private": true
+    },
+    "postSlug": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

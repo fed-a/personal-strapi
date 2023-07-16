@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reaction_fires",
+  "info": {
+    "singularName": "reaction-fire",
+    "pluralName": "reaction-fires",
+    "displayName": "ReactionFire"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "userHash": {
+      "type": "string",
+      "required": false,
+      "private": true
+    },
+    "postSlug": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

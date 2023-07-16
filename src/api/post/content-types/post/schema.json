@@ -59,12 +59,7 @@
       "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      }
+      ]
     },
     "content": {
       "pluginOptions": {
@@ -80,29 +75,35 @@
       "required": true
     },
     "timeToRead": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
       "type": "integer",
       "required": true,
       "default": 1
     },
     "postId": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
       "type": "uid",
       "targetField": "slug"
     },
-    "reactions": {
+    "difficulty": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "apprentice",
+        "adept",
+        "expert",
+        "master"
+      ],
+      "default": "apprentice",
+      "required": true
+    },
+    "tags": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::reaction.reaction",
-      "mappedBy": "post"
+      "relation": "manyToMany",
+      "target": "api::tag.tag",
+      "mappedBy": "posts"
     }
   }
 }

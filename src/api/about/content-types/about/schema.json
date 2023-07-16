@@ -56,6 +56,38 @@
         }
       },
       "component": "landing.work-exp"
+    },
+    "tags": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "customField",
+      "options": [
+        "management",
+        "marketing",
+        "tilda",
+        "react",
+        "angular",
+        "nextjs",
+        "other",
+        "effector",
+        "typescript",
+        "javascript",
+        "css",
+        "html",
+        "sass",
+        "tailwind",
+        "design",
+        "ux",
+        "webDesign",
+        "ui",
+        "algorithms",
+        "selfImprovement",
+        "immigration"
+      ],
+      "customField": "plugin::multi-select.multi-select"
     }
   }
 }

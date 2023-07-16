@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reaction_angries",
+  "info": {
+    "singularName": "reaction-angry",
+    "pluralName": "reaction-angries",
+    "displayName": "ReactionAngry",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "userHash": {
+      "type": "string",
+      "required": false,
+      "private": true
+    },
+    "postSlug": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
