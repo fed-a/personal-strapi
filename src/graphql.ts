@@ -11,7 +11,7 @@ const likes =
             resolve: async (parent) => {
               const filters = {
                 filters: {
-                  postId: parent.slug,
+                  postSlug: parent.slug,
                 },
               };
               const [likes, fires, hearts, tears, angries] = await Promise.all([
